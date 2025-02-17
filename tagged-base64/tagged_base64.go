@@ -40,7 +40,7 @@ func Parse(s string) (*TaggedBase64, error) {
 	// Split tag and data.
 	tokens := strings.Split(s, "~")
 	if len(tokens) < 2 {
-		return nil, fmt.Errorf("missing delimeter")
+		return nil, fmt.Errorf("missing delimiter")
 	} else if len(tokens) > 2 {
 		return nil, fmt.Errorf("too many delimiters")
 	}

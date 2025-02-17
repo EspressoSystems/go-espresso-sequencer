@@ -208,7 +208,7 @@ func (i *U256Decimal) ToU256() *U256 {
 	return &U256{i.Int}
 }
 
-// A BigInt type which serializes to JSON a a hex string. This ensures compatibility with the
+// A BigInt type which serializes to JSON as a hex string. This ensures compatibility with the
 // Espresso APIs.
 type U256 struct {
 	big.Int
@@ -288,7 +288,7 @@ type Version struct {
 }
 
 func (v *Version) UnmarshalJSON(b []byte) error {
-	// Use an alias type to avoid recusive calls of this function
+	// Use an alias type to avoid recursive calls of this function
 	type Alias Version
 
 	type Dec struct {
